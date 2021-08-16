@@ -47,6 +47,8 @@ module.exports = {
           if (!isNumber(user.pc)) user.pc = 0
         } else global.db.data.users[m.sender] = {
           exp: 0,
+          nabungexp: 0,
+          nabunglimit: 0,
           limit: 10,
           lastclaim: 0,
           registered: false,
