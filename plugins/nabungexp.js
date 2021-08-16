@@ -1,5 +1,6 @@
 let handler = async (m, { conn, text }) => {
 if (!text) throw 'Masukkan Jumlah exp yang akan di tabung ...'
+if (isNaN(text)) throw 'Hanya angka'
 if (global.db.data.users[m.sender].exp <= text) throw 'EXP tidak cukup untuk ditabung !!'
 global.db.data.users[m.sender].nabungexp += text
 global.db.data.users[m.sender].exp -= text
